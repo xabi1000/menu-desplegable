@@ -1,11 +1,10 @@
-# Navbar Menu Totalmente Responsivo
+# Responsive Navbar Menu
+This code implements a fully responsive navigation menu that adapts to different screen sizes. It is written in JavaScript and uses event listeners to make the menu interactive.
 
-Este código implementa un menú de navegación totalmente responsivo que se adapta a diferentes tamaños de pantalla. Está escrito en JavaScript y utiliza eventos de escucha para hacer que el menú sea interactivo.
+- The addClick function is responsible for showing and hiding submenus when clicking on menu items. It uses the clientHeight property to get the submenu height and scrollHeight to set its height when displaying it. Additionally, it changes the menu item's class to reflect its current state.
 
--La función addClick se encarga de mostrar y ocultar los submenús al hacer clic en los elementos del menú. Utiliza la propiedad clientHeight para obtener la altura del submenú y scrollHeight para establecer su altura al mostrarlo. Además, cambia la clase del elemento del menú para reflejar su estado actual.
+- The deleteStyleHeight function is used to remove the height style on submenus when the screen is resized and the full menu becomes visible. This ensures that the menu displays correctly on large screens and prevents display issues.
 
--La función deleteStyleHeight se utiliza para eliminar el estilo de altura en los submenús cuando la pantalla se amplía y se hace visible el menú completo. Esto asegura que el menú se muestre correctamente en pantallas grandes y previene problemas de visualización.
+- The resize event listener detects changes in screen size and updates the menu accordingly. If the screen is large enough, deleteStyleHeight is called to reset the submenu styles. If the screen is small enough, addClick is called to make the menu interactive.
 
--El evento de escucha resize se encarga de detectar cambios en el tamaño de la pantalla y actualizar el menú en consecuencia. Si la pantalla es lo suficientemente grande, se llama a deleteStyleHeight para restablecer los estilos de los submenús. Si la pantalla es lo suficientemente pequeña, se llama a addClick para hacer que el menú sea interactivo.
-
--Finalmente, el evento de escucha click se utiliza para mostrar y ocultar el menú en pantallas pequeñas. Cuando se hace clic en el botón del menú hamburguesa, se agrega o elimina una clase CSS para mostrar u ocultar el menú.
+- Finally, the click event listener is used to show and hide the menu on small screens. When the hamburger menu button is clicked, a CSS class is added or removed to show or hide the menu.
